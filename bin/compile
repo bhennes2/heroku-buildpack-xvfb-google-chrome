@@ -30,16 +30,6 @@ function indent() {
   esac
 }
 
-# stack=${STACK:-heroku-16}
-# if [ "${stack,,}" != "cedar-14" ]; then
-#   error "The Google Chrome Xvfb buildpack is only supported on Cedar-14."
-#   error "For newer stacks you must instead use Google Chrome Buildpack,"
-#   error "which runs Chrome in headless mode without Xvfb."
-#   error "For more details see:"
-#   error "https://devcenter.heroku.com/articles/heroku-ci#known-issues"
-#   exit 1
-# fi
-
 # Detect requested channel or default to stable
 if [ -f $ENV_DIR/GOOGLE_CHROME_CHANNEL ]; then
   channel=$(cat $ENV_DIR/GOOGLE_CHROME_CHANNEL)
@@ -69,7 +59,7 @@ esac
 
 indent "Installing Google Chrome from the $channel channel."
 
-PACKAGES="libxss1 libnss3 xvfb xserver-xephyr tigervnc-standalone-server x11-utils gnumeric"
+PACKAGES="libatk1.0-0 libxss1 libnss3 xvfb xserver-xephyr tigervnc-standalone-server x11-utils gnumeric"
 
 APT_CACHE_DIR="$CACHE_DIR/apt/cache"
 APT_STATE_DIR="$CACHE_DIR/apt/state"
