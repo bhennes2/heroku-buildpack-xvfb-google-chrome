@@ -84,6 +84,7 @@ for PACKAGE in $PACKAGES; do
     topic "Fetching .debs for $PACKAGE"
     apt-get $APT_OPTIONS -y -d install --reinstall $PACKAGE | indent
   fi
+  DEBIAN_FRONTEND=noninteractive apt-get install keyboard-configuration
 done
 
 mkdir -p $BUILD_DIR/.apt
