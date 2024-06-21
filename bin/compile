@@ -60,7 +60,7 @@ esac
 indent "Installing Google Chrome from the $channel channel."
 
 # PACKAGES="libatk1.0-0 libxss1 libnss3 xvfb xserver-xephyr tigervnc-standalone-server x11-utils gnumeric"
-PACKAGES="libgtk2.0-0t64 libgtk-3-0t64 libgbm-dev libnotify-dev libnss3 libxss1 libasound2t64 libxtst6 xauth xvfb xkb-data"
+PACKAGES="libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb xkb-data"
 
 APT_CACHE_DIR="$CACHE_DIR/apt/cache"
 APT_STATE_DIR="$CACHE_DIR/apt/state"
